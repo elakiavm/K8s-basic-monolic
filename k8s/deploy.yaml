@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: news-ap
+spec:
+  selector:
+    matchLabels:
+      app: news-ap
+  template:
+    metadata:
+      labels:
+        app: news-ap
+    spec:
+      containers:
+      - name: news-ap
+        image: news
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5003
+        imagePullPolicy: IfNotPresent
