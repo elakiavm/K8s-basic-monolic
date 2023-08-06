@@ -15,7 +15,7 @@
 
  ``` kubectl apply -f k8s  ```
 
- ``` kubectl port-forward svc/news 9090:80 ```
+ ``` kubectl port-forward svc/news-ap 9090:80 ```
 
 
 
@@ -26,4 +26,4 @@
 
  ``` kubectl rollout restart news  ```
 
- ``` kubectl port-forward svc/news 9090:80```
+ ``` kubectl port-forward svc/news-ap 9090:80```
